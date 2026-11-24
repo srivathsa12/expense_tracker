@@ -47,3 +47,30 @@ body{
 #addBtn:hover{
     background-color: orange;
 }
+
+#warning{
+    color: red;
+    font-weight: bold;
+}
+
+#stats p{
+    background-color: #1e1e1e;
+    padding: 15px;
+    margin: 0;
+    border-radius: 8px;
+    border-top: 3px solid gold;
+    min-width: 120px;
+}
+
+#list{
+    list-style: none;
+    padding: 0;    
+}
+
+#list li{
+    background-color: #1e1e1e;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-left: 4px solid gold;
+    border-radius: 5px;
+}
