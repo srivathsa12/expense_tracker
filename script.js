@@ -23,9 +23,9 @@ var addBtn = document.getElementById("addBtn");
             }
         }
 
-        function showExpense(name, amount, category){
+        function showExpense(name, amount, category, date){
             var item = document.createElement("li");
-            item.innerText = name + "-Rs" + amount + "(" + category + ")";
+            item.innerText = name + "-Rs" + amount + "(" + category + ") - " + date;
 
             document.getElementById("list").appendChild(item);
 
@@ -62,9 +62,10 @@ var addBtn = document.getElementById("addBtn");
                 alert("Please fill everything");
                 return;
             }
+            var today = new Date().toLocaleDateString();
             showExpense(name, amount, category);
             
-            expenses.push({name:name, amount:amount,category:category});
+            expenses.push({name:name, amount:amount,category:category, date: today});
             localStorage.setItem("expenses", JSON.stringify(expenses));
             
 
@@ -90,6 +91,6 @@ var addBtn = document.getElementById("addBtn");
             expenses = JSON.parse(saved);
 
             for(var i=0; i < expenses.length; i++){
-                showExpense(expenses[i].name, expenses[i].amount, expenses[i].category);
+                showExpense(expenses[i].name, expenses[i].amount, expenses[i].category, expenses[i].date);
             }
         }
