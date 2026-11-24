@@ -72,6 +72,14 @@ var addBtn = document.getElementById("addBtn");
             document.getElementById("amount").value = "";
             
         };
+        document.getElementById("clearBtn").onclick = function(){
+            var sure = confirm("Delete all expenses?");
+
+            if (sure == true){
+                localStorage.removeItem("expenses");
+                location.reload();
+            }
+        }
         var savedBudget = localStorage.getItem("budget");
         if (savedBudget != null){
             document.getElementById("budget").value = savedBudget;           
