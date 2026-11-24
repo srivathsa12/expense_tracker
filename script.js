@@ -23,9 +23,20 @@ var addBtn = document.getElementById("addBtn");
             }
         }
 
-        function showExpense(name, amount, category, date){
+        function showExpense(name, amount, category, date, index){
             var item = document.createElement("li");
             item.innerText = name + "-Rs" + amount + "(" + category + ") - " + date;
+
+            var delBtn = document.createElement("button");
+            delBtn.innerText = "x";
+
+            delBtn.onclick = function(){
+                expenses.splice(index, 1);
+                localStorage.setItem("expenses", JSON.stringify(expenses));
+                location.reload();
+            };
+
+            item.appendChild(delBtn);
 
             document.getElementById("list").appendChild(item);
 
@@ -63,7 +74,7 @@ var addBtn = document.getElementById("addBtn");
                 return;
             }
             var today = new Date().toLocaleDateString();
-            showExpense(name, amount, category);
+            showExpense(name, amount, category, expenses.length);
             
             expenses.push({name:name, amount:amount,category:category, date: today});
             localStorage.setItem("expenses", JSON.stringify(expenses));
@@ -91,6 +102,6 @@ var addBtn = document.getElementById("addBtn");
             expenses = JSON.parse(saved);
 
             for(var i=0; i < expenses.length; i++){
-                showExpense(expenses[i].name, expenses[i].amount, expenses[i].category, expenses[i].date);
+                showExpense(expenses[i].name, expenses[i].amount, expenses[i].category, expenses[i].date, i);
             }
         }

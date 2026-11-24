@@ -94,3 +94,12 @@ body{
 #clearBtn:hover{
     background-color: red;
 }
+#list li button{
+    float: right;
+    background-color: #8b0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 3px 8px;
+    cursor: pointer;
+}
