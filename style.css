@@ -1,6 +1,8 @@
 body{
     font-family: Arial;
     margin: 0;
+    background-color: #121212;
+    color: white;
 }
 
 #title{
@@ -51,6 +53,12 @@ body{
 #warning{
     color: red;
     font-weight: bold;
+}
+
+#stats{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 #stats p{
