@@ -1,23 +1,43 @@
+:root{
+    --bg: #0b0b0b;
+    --card: #141414;
+    --ink: #f2f2ee;
+    --muted: #8a8a85;
+    --line: rgba(242, 242, 238, 0.10);
+    --accent: #f4da40;
+    --danger: #ff5a4f;
+
+    --font: 'Geist', system-ui, sans-serif;
+    --mono: 'Geist Mono', ui-monospace, monospace;
+
+    --radius: 8px;
+    --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
 body{
-    font-family: Arial;
+    font-family: var(--font);
     margin: 0;
-    background-color: #121212;
-    color: white;
+    background-color: var(--bg);
+    color: var(--ink);
 }
 
 #title{
-    background-color: black;
-    color: white;
+    background-color: var(--bg);
+    border-bottom: 1px solid var(--line);
+    letter-spacing: -0.03em;
+    color: var(--ink);
     padding: 15px;
     margin: 0;
 }
 
 #sidebar{
     width: 250px;
-    background-color: #1e1e1e;
+    background-color: var(--card);
+    border-right: 1px solid var(--line);
     padding: 20px;
     float: left;
     height: 100vh;
+
 }
 
 #main{
@@ -28,17 +48,18 @@ body{
 #sidebar input, #sidebar select{
     width: 100%;
     padding: 8px;
-    border: 1px solid gray;
+    border: 1px solid var(--line);
     border-radius: 5px;
     background-color: #2a2a2a;
     color: white;
+    font-size: 16px;
     box-sizing: border-box;
 }
 
 #addBtn{
     width: 100%;
     padding: 10px;
-    background-color: gold;
+    background-color: var(--accent);
     color: black;
     border: none;
     border-radius: 5px;
@@ -51,7 +72,7 @@ body{
 }
 
 #warning{
-    color: red;
+    color: var(--danger);
     font-weight: bold;
 }
 
@@ -62,11 +83,11 @@ body{
 }
 
 #stats p{
-    background-color: #1e1e1e;
+    background-color: var(--card);
     padding: 15px;
     margin: 0;
     border-radius: 8px;
-    border-top: 3px solid gold;
+    border-top: 3px solid var(--accent);
     min-width: 120px;
 }
 
@@ -76,23 +97,24 @@ body{
 }
 
 #list li{
-    background-color: #1e1e1e;
+    background-color: var(--card);
     padding: 10px;
     margin-bottom: 8px;
-    border-left: 4px solid gold;
+    border-left: 4px solid var(--accent);
     border-radius: 5px;
 }
 #clearBtn{
     width: 100%;
     padding: 10px;
-    background-color: #8b0000;
-    color:white;
-    border: none;
+    background-color: transparent;
+    color:var(--muted);
+    border: 1px solid var(--line);
     border-radius: 5px;
     cursor: pointer;
 }
 #clearBtn:hover{
-    background-color: red;
+    background-color: var(--danger);
+    color: var(--danger);
 }
 #list li button{
     float: right;
