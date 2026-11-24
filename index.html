@@ -56,10 +56,12 @@
         </div>
         <div id="main">
             <h2>This month</h2>
+            <p>Total spent: Rs <span id="total">0</span></p>
             <ul id="list"></ul>
         </div>
         <script>
         var addBtn = document.getElementById("addBtn");
+        var totalSpent = 0
 
         addBtn.onclick = function(){
             var name = document.getElementById("useName").value;
@@ -75,6 +77,13 @@
             item.innerText = name + "-Rs" + amount + "(" + category + ")";
 
             document.getElementById("list").appendChild(item);
+
+            totalSpent = totalSpent + Number(amount);
+            document.getElementById("total").innerText = totalSpent;
+
+            document.getElementById("useName").value = "";
+            document.getElementById("amount").value = "";
+            
 
         };
         </script>   
