@@ -9,7 +9,7 @@
                 margin: 0;
             }
 
-            h1{
+            #title{
                 background-color: black;
                 color: white;
                 padding: 15px;
@@ -31,29 +31,10 @@
 
         </style>
     </head>
-    <script>
-        var addBtn = document.getElementById("addBtn")
-
-        addBtn.onclick = function(){
-            var name = document.getElementById("useName").value;
-            var amount = document.getElementById("amount").value;
-            var category = document.getElementById("category").value;
-
-            if (name == "" || amount == ""){
-                alert("Please fill everything");
-                return;
-            }
-
-            var item = document.createElement("li");
-            item.innerText = name + "-Rs" + amount + "(" + category + ")";
-
-            document.getElementById("list").appendChild(item);
-
-        };
-    </script>
+    
     <body>
 
-        <h1> Expense Tracker</h>
+        <h1 id="title"> Expense Tracker</h1>
         <div id="sidebar">
             <h2>Add expense</h2>
             <p>What did you spend on ??</p>
@@ -76,7 +57,27 @@
         <div id="main">
             <h2>This month</h2>
             <ul id="list"></ul>
-        </div>    
+        </div>
+        <script>
+        var addBtn = document.getElementById("addBtn");
+
+        addBtn.onclick = function(){
+            var name = document.getElementById("useName").value;
+            var amount = document.getElementById("amount").value;
+            var category = document.getElementById("category").value;
+
+            if (name == "" || amount == ""){
+                alert("Please fill everything");
+                return;
+            }
+
+            var item = document.createElement("li");
+            item.innerText = name + "-Rs" + amount + "(" + category + ")";
+
+            document.getElementById("list").appendChild(item);
+
+        };
+        </script>   
 
     </body>
 
