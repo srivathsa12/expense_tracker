@@ -26,7 +26,7 @@
         </nav>
 
         <div class="top-right">
-            <button class="round-btn" id="streakBtn" arian-label="Your streak">
+            <button class="round-btn" id="streakBtn" aria-label="Your streak">
                 <i data-lucide="flame"></i>
                 <span class="ping" id="ping"></span>
             </button>
@@ -38,9 +38,41 @@
             <p class="welcome-sub" id="subtitle">Take control of your pocket money, one day at a time</p>
             <h1 id="greeting">Welcome Back, Srivathsa!</h1>
         </div>
-        <button class="btn-black" id="openAdd"><i data-lucide="plus"></i> Add Expense</data></button>
+        <button class="btn-black" id="openAdd"><i data-lucide="plus"></i> Add Expense</button>
     </section>
 
+    <section class="hero-row">
+        <div class="hero reveal" style="--i:0">
+            <div class="hero-head">
+                <h2>This Month</h2>
+                <div class="glass-seg">
+                    <button class="active" id="segMonth">Month</button>
+                    <button id="segWeek">Week</button>
+                </div>
+            </div>
+
+            <p class="big-num" id="monthTotal">Rs 0<span class="dec">.00</span></p>
+            <span class="glass-pill" id="monthTrend"><i data-lucide="arrow-up-right"></i> 0% vs last month</span>
+
+            <div class="chart">
+                <div class="y-labels" id="yLabels"></div>
+                <div class="bars-wrap">
+                    <div class="bars" id="bars">
+                        <div class="bar" style="--h:40%"><span style="height: 40%"></span></div>
+                        <div class="bar" style="--h:75%"><span style="height:75%"></span></div>
+                        <div class="bar" style="--h:20%"><span style="height:20%"></span></div>
+                        <div class="bar today" style="--h:55%"><span style="height:55%"></span></div>
+                        <div class="bar future" style="--h:8%"><span style="height:8%"></span></div>
+                    </div>
+                    <div class="tooltip" id="tooltip">
+                        <p><b id="tipAmount">Rs 0</b> <span class="tip-tag" id="tipTag">Food</span></p>
+                        <p class="tip-date" id="tipDate">25 Nnovember</p>
+                    </div>
+                </div>
+            </div>
+            <div class="x-labels" id="xLabels"></div>
+        </div>
+    </section>
 </div>
 
 <script src="https://unpkg.com/lucide@latest"></script>
