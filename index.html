@@ -66,11 +66,31 @@
                     </div>
                     <div class="tooltip" id="tooltip">
                         <p><b id="tipAmount">Rs 0</b> <span class="tip-tag" id="tipTag">Food</span></p>
-                        <p class="tip-date" id="tipDate">25 Nnovember</p>
+                        <p class="tip-date" id="tipDate">25 November</p>
                     </div>
                 </div>
             </div>
             <div class="x-labels" id="xLabels"></div>
+        </div>
+
+        <div class="hero hero-side reveal" style="--i:1">
+            <div class="hero-head">
+                <h2>Safe to Spend Today</h2>
+                <button class="glass-round" id="editBudget" aria-label="Edit budget"><i data-lucide="pencil"></i></button>
+            </div>
+
+            <p class="big-num" id="safeToday">Rs 0<span class="dec">.00</span></p>
+            <div class="pill-row">
+                <span class="glass-pill" id="daysLeft"><i data-lucide="calendar"></i> 0 days left</span>
+                <span class="glass-pill" id="budgetPill"><i data-lucide="wallet"></i> Budget: Rs 0</span>
+
+            </div>
+
+            <div class="action-row">
+                <button class="btn-white" id="openAdd2"><i data-lucide="arrow-up-right"></i> Add Expense</button>
+                <button class="btn-white-round" id="swapBtn" aria-label="Switch chart view"><i data-lucide="arrow-down-up"></i></button>
+                <button class="btn-white" id="noSpendBtn"><i data-lucide="leaf"></i> No-spend Day</button>
+            </div>
         </div>
     </section>
 </div>
