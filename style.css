@@ -348,3 +348,40 @@ svg.lucide{
     color: #ffd9c4;
     text-align: right;
 }
+
+.bars-wrap{
+    position: relative;
+}
+
+.bars{
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    height: 240px;
+}
+
+.bar{
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+}
+
+.bar span{
+    display: block;
+    width: 100%;
+    min-height: 4px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.35);
+    transition: background-color 0.25s;
+}
+
+.bar:hover span,
+.bar.today span{
+    background-color: white;
+}
+
+.bar.future span{
+    opacity: 0.4;
+}
