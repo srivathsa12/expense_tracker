@@ -35,4 +35,18 @@ function monthTotal(){
     return total;
 }
 
+let monthTotalBox = document.getElementById("monthTotal");
+let safeTodayBox = document.getElementById("safeToday");
+
+function bigMoney(amount) {
+    let parts = amount.toFixed(2).split(".");
+    return "Rs " + parts[0] + '<span class="dec">.' + parts[1] + "</span>";
+}
+
+function showMonth() {
+    monthTotalBox.innerHTML = bigMoney(monthTotal());
+}
+
+showMonth();
+
 lucide.createIcons();
