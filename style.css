@@ -440,3 +440,60 @@ svg.lucide{
 .x-labels span{
     flex: 1;
 }
+
+.hero-side{
+    display: flex;
+    flex-direction: column;
+}
+
+.action-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+    padding-top: 24px;
+}
+
+.btn-white{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 48px;
+    padding: 0 22px;
+    border: none;
+    border-radius: 999px;
+    background-color: white;
+    color: var(--ink);
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s var(--ease), background-color 0.2s;
+}
+
+.btn-white:hover{
+    background-color: #ffe9de;
+}
+
+.btn-white:active{
+    transform: scale(0.97);
+}
+
+.btn-white-round{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background-color: white;
+    color: var(--ink);
+    cursor: pointer;
+    transition: transform 0.4s var(--ease);
+}
+
+.btn-white-round:hover{
+    transform: rotate(180deg);
+}
+
