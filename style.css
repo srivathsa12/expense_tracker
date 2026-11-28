@@ -282,3 +282,9 @@ svg.lucide{
     width: 15px;
     height: 15px;
 }
+
+.pill-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
