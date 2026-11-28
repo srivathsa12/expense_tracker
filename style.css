@@ -288,3 +288,63 @@ svg.lucide{
     flex-wrap: wrap;
     gap: 8px;
 }
+
+.glass-seg{
+    display: inline-flex;
+    padding: 4px;
+    border-radius: 999px;
+    background-color: rgba(255, 255, 255, 0.18);
+}
+
+.glass-seg button{
+    height: 36px;
+    padding: 0 18px;
+    border: none;
+    border-radius: 999px;
+    background: transparent;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.25s, color 0.25s;
+}
+
+.glass-seg button.active{
+    background-color: white;
+    color: var(--ink);
+}
+
+.glass-round{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.18);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.25s;
+}
+
+.glass-round:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.chart{
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    gap: 0 12px;
+    margin-top: 26px;
+}
+
+.y-labels{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 240px;
+    font-size: 13px;
+    color: #ffd9c4;
+    text-align: right;
+}
