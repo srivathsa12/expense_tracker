@@ -95,4 +95,30 @@ function showTrend(){
 
 showTrend();
 
+function daysLeft() {
+    let now = new Date();
+    let lastDay = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
+    return lastDay - now.getDate() + 1;
+}
+
+function safeToday(){
+    let left = budget - monthTotal();
+    if (left < 0){
+        left = 0;
+    }
+    return left / daysLeft();
+}
+
+let daysLeftBox = document.getElementById("daysLeft");
+let budgetPill = document.getElementById("budgetPill");
+
+function showSafe(){
+    safeTodayBox.innerHTML = bigMoney(safeToday());
+    daysLeftBox.innerHTML = '<i data-lucide="calendar"></i> ' + daysLeft() + " days left";
+    budgetPill.innerHTML = '<i data-lucide="wallet"></i> Budget: ' + money(budget);
+    lucide.createIcons();
+}
+
+showSafe();
+
 lucide.createIcons();
