@@ -121,4 +121,23 @@ function showSafe(){
 
 showSafe();
 
+let editBudgetBtn = document.getElementById("editBudget");
+
+function changeBudget(){
+    let answer = prompt("Monthly budget in Rs:", budget);
+    if (answer == null){
+        return;
+    }
+    let number = Number(answer);
+    if (answer.trim() == "" || isNaN(number) || number < 0){
+        alert("Please enter a valid amount.");
+        return;
+    }
+    budget = number;
+    saveData();
+    showSafe();
+}
+
+editBudgetBtn.addEventListener("click", changeBudget);
+
 lucide.createIcons();
