@@ -220,3 +220,46 @@ svg.lucide{
     height: 52px;
     margin-top: 6px;
 }
+
+.hero-row{
+    display: grid;
+    grid-template-columns: 1.45fr 1fr;
+    gap: 8px;
+}
+
+.hero{
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--r-xl);
+    padding: 34px 44px 30px;
+    color: white;
+    background: linear-gradient(172deg, var(--hero-1) 0%, var(--hero-2) 30%, var(--hero-3) 72%, var(--hero-4) 100%);
+}
+
+.hero-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 54px;
+}
+
+.hero h2{
+    font-size: 24px;
+    color: #ffd9c4;
+    letter-spacing: -0.02em;
+}
+
+.big-num{
+    font-size: clamp(44px, 2rem + 2vw, 60px);
+    font-weight: 500;
+    letter-spacing: -0.05em;
+    line-height: 1;
+    margin: 18px 0 16px;
+    font-variant-numeric: tabular-nums;
+    color: #ffe9de;
+    white-space: nowrap;
+}
+
+.dec{
+    opacity: 0.5;
+}
